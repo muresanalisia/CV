@@ -1,0 +1,204 @@
+body {
+
+  display: grid;
+  grid-template-columns: repeat(12, [col-start] 1fr);
+  gap: 20px;
+
+  background-color: #000;
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 1rem;
+
+  /* Font */
+  font-family: "Overpass Mono", monospace;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1em;
+  color: #fff;
+
+  /* Grid for the overall page layout */
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+  /* Links */
+  a, a:visited, a:hover, a:active {
+    color: #fff;
+    text-decoration: none;
+  }
+
+
+  /* ..................... Purple headers  ..................... */
+  h1 {
+
+    /* Font (imported) */
+    font-family: "Jersey 10", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.5em;
+    color: #fff;
+
+    /* Purple padding around it */
+    background-color: #380f89;
+    padding: 0.5em;
+    border-radius: 3em;
+    height: fit-content;
+    width: fit-content;
+
+  }
+
+
+  /* "Alisia Cristina Muresan" text */
+  h2 {
+    font-size: 3em;
+    color: #fff;
+    font-family: "Jersey 10", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+
+
+/* ..................... Navigation bar styling  ..................... */
+  .nav_bar {
+    
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+    grid-column: 1 / -1;
+  }
+
+  nav {
+    font-size:1em;
+    background-color: #000;
+    color: #fff;
+  }
+
+  /* Styling when non-active */
+  nav a, nav a:visited, nav a:hover, nav a:active {
+    color: #fff;
+    text-decoration: none;
+  }
+
+  /* Styling when active */
+  nav a.active {
+    font-weight: bold;
+    text-decoration: underline;
+  }
+  
+/* ..................... Table styling  ..................... */
+  
+
+  table {
+    border: double 1px #fff;
+    table-layout: fixed;
+  }
+    /* Three columns split into four parts: 1 : 1 : 2 */
+    th:nth-child(1), td:nth-child(1),
+    th:nth-child(2), td:nth-child(2) {
+      width: 25%;
+    }
+    th:nth-child(3), td:nth-child(3) {
+      width: 50%;
+    }
+
+    /* Styling for the table cells */
+    th, td {
+      font-size: 1em;
+      color: #fff;
+      padding: 0.5em;
+      border-right: 1px solid #fff;
+    }
+
+
+    /* Remove the right border from the last cell in each row */
+    th:last-child, td:last-child {
+      border-right: none;
+    }
+ 
+
+
+
+
+
+/* ..................... Image styling  ..................... */
+.profile-img {
+  /* Image */
+  display: block;
+  width: 10%;
+  height: auto;
+  max-width: 350px;
+  min-width: 220px;
+  border: 1px solid #fff;
+  margin: 40px;
+  border-radius: 3em;
+}
+
+.me > p {
+  display: none;
+}
+
+/*...............................................................*/
+
+@media(max-width: 375px){
+
+  .me > table {
+    display: none;
+  }
+
+  .me > p {
+    display: block;
+  }
+
+  h1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+}
+
+@media (min-width: 376px) and (max-width: 756px)
+{
+  .me > table{
+    font-size: 0.75em;
+  }
+
+}
+
+@media (max-width: 1024px) {
+  .me > table {
+    width: fit-content;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+  .profile-img {
+    margin: 40px auto;
+  }
+  h2 {
+    margin: 40px auto;
+    text-align: center;
+  }
+
+}
+
+@media (min-width: 1025px) {
+  .me {
+    display: grid;
+    grid-template-columns: 2fr 1fr;   
+  }
+
+  .profile-img {
+    grid-column: 2;
+    grid-row: 1 / 4;
+  }
+
+}
+
+
+
+
+
