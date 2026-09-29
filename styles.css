@@ -110,6 +110,8 @@ body {
       color: #fff;
       padding: 0.5em;
       border-right: 1px solid #fff;
+      text-align: center;
+      white-space: nowrap;
     }
 
 
