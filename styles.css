@@ -141,7 +141,15 @@ body {
 
 @media(max-width: 375px){
 
-  .me > table {
+  html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+  box-sizing: border-box;
+  padding: 0.5rem;
+  }
+
+  .me > table,
+  .profile-img {
     display: none;
   }
 
@@ -149,21 +157,59 @@ body {
     display: block;
   }
 
-  h1{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+  h1 {
+    font-size: 1.1rem;
+    max-width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+  }
+
+  h2 {
+    font-size: 1.6rem;
+    max-width: 100%;
+    overflow-wrap: anywhere;
+    margin: 20px 0;
+  }
+
+  .nav_bar, nav {
+    max-width: 100%;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    text-align: center;
+  }
+
+  ul {
+    padding-left: 1.2rem;
+    margin: 0;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  p, li {
+    box-sizing: border-box;
+    max-width: 100%;
+    overflow-wrap: anywhere;
+    font-size: 0.85em;
   }
 
 }
 
-@media (min-width: 376px) and (max-width: 756px)
+@media (min-width: 375px) and (max-width: 400px)
 {
   .me > table{
-    font-size: 0.9em;
+    font-size: 0.6em;
   }
 
+}
+
+@media (min-width: 401px) and (max-width: 756px)
+{
+  .me > table{
+    font-size: 0.7em;
+  }
+  p{
+    font-size: 1.2em;
+  }
 }
 
 @media (max-width: 1024px) {
@@ -178,6 +224,9 @@ body {
   h2 {
     margin: 40px auto;
     text-align: center;
+  }
+  p{
+    font-size: 1.2em;
   }
 
 }
