@@ -2,27 +2,37 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
-        <title> "CV"</title>
-        <link href="styles.css" type="text/css" rel="stylesheet" >
+        <title>Portfolio</title>
+        <link href="styles.css" type="text/css" rel="stylesheet">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <!-- ..................... Fonts import ..................... -->
+        <!-- Icons import -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+        <!-- Fonts import -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Jersey+10&family=Overpass+Mono:wght@300..700&display=swap" rel="stylesheet">
-
     </head>
 
     <body class="portfolio-page">
-        <!-- ..................... Navigation bar ..................... -->
+        <!-- Hidden checkbox for theme toggle -->
+        <input type="checkbox" id="theme-checkbox">
+
+        <!-- Navigation bar -->
         <div class="nav_bar">
             <nav>
-                <a href="index.html" >About me</a> |
+                <a href="index.html">About me</a> |
                 <a href="cv.html">CV</a> |
                 <a href="portfolio.html" class="active">Portfolio</a>
             </nav>
+            <label for="theme-checkbox" class="theme-toggle-label" title="Toggle theme">
+                <i class="fa-solid fa-moon icon-moon"></i>
+                <i class="fa-solid fa-sun icon-sun"></i>
+            </label>
         </div>
 
-        <!-- ..................... Projects ..................... -->
+        <!-- Projects -->
         <h1>  Projects  </h1>
         
         <p><a href="https://mystery-desk-adventures.lovable.app">[ May 2026 - Present ] <b>Detective Academy</b></a></p>
@@ -32,14 +42,13 @@
             <li>Tech: Lovable</li>
         </ul>
 
-
-        <p><a href = "https://github.com/muresanalisia/FocusLock">[ Jun 2026 ] <b>FocusLock</b><br></a></p>
-            <ul>
-                <li>Mindful screen-time app designed to interrupt compulsive scrolling habits.</li>
-                <li>Adds intentional friction: requires answering a reflection prompt and solving a math puzzle before granting short extensions.</li>
-                <li>Features per-app daily limits, custom reset times, and 7-day usage tracking.</li>
-                <li>Tech : Claude Code, GitHub</li>
-            </ul>
+        <p><a href="https://github.com/muresanalisia/FocusLock">[ Jun 2026 ] <b>FocusLock</b><br></a></p>
+        <ul>
+            <li>Mindful screen-time app designed to interrupt compulsive scrolling habits.</li>
+            <li>Adds intentional friction: requires answering a reflection prompt and solving a math puzzle before granting short extensions.</li>
+            <li>Features per-app daily limits, custom reset times, and 7-day usage tracking.</li>
+            <li>Tech: Claude Code, GitHub</li>
+        </ul>
 
         <p>[ Apr 2026 ] <b>Roblox game development</b></p>
         <ul>
@@ -48,10 +57,10 @@
             <li>Tech: Roblox Studio, Claude, Gemini</li>
         </ul>
 
-        <p><a href= "https://github.com/muresanalisia/nineMensMorris">[ Feb 2026 ] <b> Nine men's Morris </b></a></p>
+        <p><a href="https://github.com/muresanalisia/nineMensMorris">[ Feb 2026 ] <b> Nine men's Morris </b></a></p>
         <ul>
             <li>A Python implementation of Nine Men's Morris featuring player-vs-computer gameplay, built with object-oriented layered architecture and a comprehensive test suite.</li>
-            <li>Tech: Python, OOP, Layered Architecture, Unit Testing, CLI/Console UI </li>
+            <li>Tech: Python, OOP, Layered Architecture, Unit Testing, CLI/Console UI</li>
         </ul>
 
         <p>[ Jan 2026 ] <b> Code guess </b></p>
@@ -60,7 +69,7 @@
             <li>Tech: Python, OOP, Layered Architecture, Separation of Concerns (SoC), CLI/Console UI</li>
         </ul>
 
-        <p>[ Jun 2025] <b>Music Store Management System</b></p>
+        <p>[ Jun 2025 ] <b>Music Store Management System</b></p>
         <ul>
             <li>Full-stack desktop app managing inventory, clients, and sales transactions.</li>
             <li>Implemented complete CRUD functionality backed by an optimized relational SQL database.</li>
@@ -68,7 +77,7 @@
             <li>Tech: C#, SQL, Visual Studio</li>
         </ul>
 
-        <p>[ Oct 2021] <b>Guard-A-Ware</b></p>
+        <p>[ Oct 2021 ] <b>Guard-A-Ware</b></p>
         <ul>
             <li>Women's safety app prototype developed at Teens in AI Hackathon 2021 via full design thinking.</li>
             <li>Features live location sharing, voice-triggered panic mode, safe routes, and fake calls.</li>
