@@ -1,20 +1,48 @@
+/* System Default Theme == Light */
 :root {
-  /* Default: Light mode */
   --bg-color: #F6F4F4;
   --text-color: #292a2b;
   --purple-accent: #ada7cf;
-  --purple-text: #fff;
+  --purple-text: #292a2b;
   --border-color: #292a2b;
 }
 
+/* System default theme == dark  */
 @media (prefers-color-scheme: dark) {
   :root {
-    /* Dark mode */
     --bg-color: #000;
     --text-color: #fff;
     --purple-accent: #380f89;
     --purple-text: #fff;
     --border-color: #fff;
+  }
+}
+
+/* Hidden checkbox state controlling theme above 375px */
+#theme-checkbox {
+  display: none;
+}
+
+/* When checkbox is checked */
+@media (min-width: 376px) {
+  /* If default system was light, check switches to dark */
+  :root:has(#theme-checkbox:checked) {
+    --bg-color: #000;
+    --text-color: #fff;
+    --purple-accent: #380f89;
+    --purple-text: #fff;
+    --border-color: #fff;
+  }
+
+  /* If default system was dark, checking switches to light */
+  @media (prefers-color-scheme: dark) {
+    :root:has(#theme-checkbox:checked) {
+      --bg-color: #F6F4F4;
+      --text-color: #292a2b;
+      --purple-accent: #ada7cf;
+      --purple-text: #292a2b;
+      --border-color: #292a2b;
+    }
   }
 }
 
@@ -32,7 +60,7 @@ body {
   font-style: normal;
   font-size: 1em;
 
-  /* Grid for the overall page layout */
+  /* Grid for overall page layout */
   display: grid;
   grid-template-columns: 1fr;
   gap: 1rem;
@@ -52,7 +80,6 @@ h1 {
   font-size: 1.5em;
   color: var(--purple-text);
 
-  /* Purple padding around it */
   background-color: var(--purple-accent);
   padding: 0.5em;
   border-radius: 3em;
@@ -60,7 +87,7 @@ h1 {
   width: fit-content;
 }
 
-/* "Alisia Cristina Muresan" text */
+/* Text headers */
 h2 {
   font-size: 3em;
   color: var(--text-color);
@@ -73,9 +100,10 @@ h2 {
 .nav_bar {
   display: flex;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
   width: 100%;
   grid-column: 1 / -1;
+  gap: 1rem;
 }
 
 nav {
@@ -84,16 +112,59 @@ nav {
   color: var(--text-color);
 }
 
-/* Styling when non-active */
 nav a, nav a:visited, nav a:hover, nav a:active {
   color: var(--text-color);
   text-decoration: none;
 }
 
-/* Styling when active */
 nav a.active {
   font-weight: bold;
   text-decoration: underline;
+}
+
+/* --- Toggle Button Styling --- */
+.theme-toggle-label {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border: 1px solid var(--border-color);
+  padding: 0.35em 0.75em;
+  border-radius: 1.5em;
+  color: var(--text-color);
+  user-select: none;
+  transition: all 0.2s ease;
+}
+
+.theme-toggle-label:hover {
+  background-color: var(--purple-accent);
+  color: var(--purple-text);
+}
+
+/* Show moon by default in light mode, sun in dark mode */
+.theme-toggle-label .icon-sun { display: none; }
+.theme-toggle-label .icon-moon { display: inline-block; }
+
+@media (prefers-color-scheme: dark) {
+  .theme-toggle-label .icon-sun { display: inline-block; }
+  .theme-toggle-label .icon-moon { display: none; }
+}
+
+/* Flip icons when checked */
+:root:has(#theme-checkbox:checked) .theme-toggle-label .icon-sun {
+  display: inline-block;
+}
+:root:has(#theme-checkbox:checked) .theme-toggle-label .icon-moon {
+  display: none;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:has(#theme-checkbox:checked) .theme-toggle-label .icon-sun {
+    display: none;
+  }
+  :root:has(#theme-checkbox:checked) .theme-toggle-label .icon-moon {
+    display: inline-block;
+  }
 }
 
 /* ..................... Table styling ..................... */
@@ -104,7 +175,6 @@ table {
   table-layout: auto;
 }
 
-/* Styling for the table cells */
 th, td {
   font-size: 1em;
   color: var(--text-color);
@@ -114,7 +184,6 @@ th, td {
   white-space: nowrap;
 }
 
-/* Remove the right border from the last cell in each row */
 th:last-child, td:last-child {
   border-right: none;
 }
@@ -135,9 +204,12 @@ th:last-child, td:last-child {
   display: none;
 }
 
-/*...............................................................*/
-
+/* ..................... Window size (changes) ..................... */
 @media (max-width: 375px) {
+  .theme-toggle-label {
+    display: none !important;
+  }
+
   html, body {
     max-width: 100%;
     overflow-x: hidden;
