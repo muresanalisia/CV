@@ -2,30 +2,37 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
-        <title> "CV"</title>
-        
+        <title>CV</title>
         <link href="styles.css" type="text/css" rel="stylesheet">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <!-- ..................... Fonts import ..................... -->
+        <!-- Icons import -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+        <!-- Fonts import -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Jersey+10&family=Overpass+Mono:wght@300..700&display=swap" rel="stylesheet">
-
-
     </head>
 
     <body class="cv-page">
-        
+        <!-- Hidden checkbox for theme toggle -->
+        <input type="checkbox" id="theme-checkbox">
+
         <div class="nav_bar">
-            <!-- ..................... Navigation bar ..................... -->
+            <!-- Navigation bar -->
             <nav>
                 <a href="index.html">About me</a> |
                 <a href="cv.html" class="active">CV</a> |
                 <a href="portfolio.html">Portfolio</a>
             </nav>
+            <label for="theme-checkbox" class="theme-toggle-label" title="Toggle theme">
+                <i class="fa-solid fa-moon icon-moon"></i>
+                <i class="fa-solid fa-sun icon-sun"></i>
+            </label>
         </div>
 
-        <!-- ..................... Education ..................... -->
+        <!-- Education -->
         <div class="cv-education">   
             <h1>  Education  </h1>
 
@@ -34,7 +41,6 @@
                 <li>Software Technology Engineering @ VIA University College</li>
             </ul>
 
-            
             <p>[ Oct 2025 - July 2026 ] <b>Bachelor of Science</b>,</p>
             <ul>
                 <li>Computer Science @ Babes Bolyai University</li>
@@ -44,31 +50,30 @@
             <ul>
                 <li>"Tiberiu Popoviciu" Highschool of Computer Science</li>
             </ul>
-            
         </div>
 
-        <!-- ..................... Certifications ..................... -->
+        <!-- Certifications -->
         <div class="cv-certifications">
-
             <h1>  Certifications  </h1>
-<p> [ Sep 2026 ] <b> Claude 101 </b>, Anthropic<br><p>
-<ul>
-<li>Learned core prompt engineering and workflow integration for Claude</li>
-</ul>            
-<p>[ Jun 2026 ] <b>Career Essentials in Software Development</b>, Microsoft<br></p>
+            <p>[ Sep 2026 ] <b>Claude 101</b>, Anthropic<br></p>
+            <ul>
+                <li>Learned core prompt engineering and workflow integration for Claude</li>
+            </ul>            
+            
+            <p>[ Jun 2026 ] <b>Career Essentials in Software Development</b>, Microsoft<br></p>
             <ul>
                 <li>Introduction to Career Skills in Software Development</li>
-                <li>Programming Foundations: Fundamentals </li>
-                <li>Programming Foundations: Beyond the Fundamentals </li>
-                <li>Programming Foundations: Object-Oriented Design </li>
+                <li>Programming Foundations: Fundamentals</li>
+                <li>Programming Foundations: Beyond the Fundamentals</li>
+                <li>Programming Foundations: Object-Oriented Design</li>
             </ul>
-<p> [ Apr 2026 ] <b> Claude code 101 </b>, Anthropic<br><p>
-<ul>
-<li>Learned effective use of Claude Code for everyday software development</li>
-</ul>
+            
+            <p>[ Apr 2026 ] <b>Claude code 101</b>, Anthropic<br></p>
+            <ul>
+                <li>Learned effective use of Claude Code for everyday software development</li>
+            </ul>
 
-
-            <p>[ Jun 2025 ] <b>Certificate of Professional Competence in Computer Science</b>, Ministry of Education and Research Romania </p>
+            <p>[ Jun 2025 ] <b>Certificate of Professional Competence in Computer Science</b>, Ministry of Education and Research Romania</p>
             <ul>
                 <li>Skills: C#, SQL, Visual Studio</li>
             </ul>
@@ -77,59 +82,54 @@
             <ul>
                 <li>Skills: English</li>
             </ul>
-
         </div>
         
-        <!-- ..................... Languages ..................... -->
+        <!-- Languages -->
         <div class="cv-languages">
             <h1>  Languages  </h1>
-           
-                <p><b>English:</b> Advanced</p> 
-                <ul>
-                    <li>Fluent in reading, writing, and speaking</li>
-                </ul>
-                
-                <p><b>Romanian:</b> Native</p>
-                <ul>
-                    <li>Fluent in reading, writing, and speaking</li>
-                </ul>
+            
+            <p><b>English:</b> Advanced</p> 
+            <ul>
+                <li>Fluent in reading, writing, and speaking</li>
+            </ul>
+            
+            <p><b>Romanian:</b> Native</p>
+            <ul>
+                <li>Fluent in reading, writing, and speaking</li>
+            </ul>
 
-                <p><b>French:</b> Elementary</p>
-                <ul>
-                    <li>Basic reading, writing, and speaking skills</li>
-                </ul>
+            <p><b>French:</b> Elementary</p>
+            <ul>
+                <li>Basic reading, writing, and speaking skills</li>
+            </ul>
 
-                <p><b>Danish:</b> Beginner</p>
-                <ul>
-                    <li>Recently started learning it</li>
-                </ul>
-
+            <p><b>Danish:</b> Beginner</p>
+            <ul>
+                <li>Recently started learning it</li>
+            </ul>
         </div>
 
-        <!-- ..................... Volunteering ..................... -->
+        <!-- Volunteering -->
         <div class="cv-volunteering">
             <h1>  Volunteering  </h1>
             
-                 
-                <p>[ Oct 2023 - Current ] <b>Leo Bastion Member (Lions International)</b></p>
-                <ul>
-                 <li>Actively contributed to a range of community initiatives, including environmental actions, charity fundraisers, and cultural events, supporting education, health, and social inclusion. </li>
-                 <li>Developed teamwork and communication skills through collaborative volunteer work.</li>
-                </ul>
-                
+            <p>[ Oct 2023 - Current ] <b>Leo Bastion Member (Lions International)</b></p>
+            <ul>
+                <li>Actively contributed to a range of community initiatives, including environmental actions, charity fundraisers, and cultural events, supporting education, health, and social inclusion.</li>
+                <li>Developed teamwork and communication skills through collaborative volunteer work.</li>
+            </ul>
 
-                <p>[ Oct 2022 - Oct 2024 ] <b>Student Council Secretary</b></p>
-                <ul>
-                    <li>Supported student council operations through documentation management, meeting coordination, and structured communication between members.</li>
-                </ul>
+            <p>[ Oct 2022 - Oct 2024 ] <b>Student Council Secretary</b></p>
+            <ul>
+                <li>Supported student council operations through documentation management, meeting coordination, and structured communication between members.</li>
+            </ul>
 
-                <p>[Feb 2022 - Mar 2022] <b>TeensInAI PR team</b></p>
-                <ul>
-                    <li>Recruited tech professionals on LinkedIn as project mentors.</li>
-                    <li>Coordinated mentor-student matching and communication throughout the program.</li>
-                    <li>Strengthened skills in networking, stakeholder coordination, and professional outreach.</li>
-                </ul>
-
+            <p>[ Feb 2022 - Mar 2022 ] <b>TeensInAI PR team</b></p>
+            <ul>
+                <li>Recruited tech professionals on LinkedIn as project mentors.</li>
+                <li>Coordinated mentor-student matching and communication throughout the program.</li>
+                <li>Strengthened skills in networking, stakeholder coordination, and professional outreach.</li>
+            </ul>
         </div>    
     </body>
 </html>
