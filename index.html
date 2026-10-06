@@ -2,31 +2,38 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
-        <title> "About me"</title>
-        <link href="styles.css" type="text/css" rel="stylesheet" >
+        <title>About me</title>
+        <link href="styles.css" type="text/css" rel="stylesheet">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <!-- ..................... icons import ..................... -->
+        <!-- Icons import -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
-        <!-- ..................... Fonts import ..................... -->
+        <!-- Fonts import -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Jersey+10&family=Overpass+Mono:wght@300..700&display=swap" rel="stylesheet">
     </head>
 
     <body class="about-page">
-        
-        <!-- ..................... Navigation bar ..................... -->
+        <!-- Hidden checkbox for theme toggle -->
+        <input type="checkbox" id="theme-checkbox">
+
+        <!-- Navigation bar -->
         <div class="nav_bar">
             <nav>
                 <a href="index.html" class="active">About me</a> |
                 <a href="cv.html">CV</a> |
                 <a href="portfolio.html">Portfolio</a>
             </nav>
+            <label for="theme-checkbox" class="theme-toggle-label" title="Toggle theme">
+                <i class="fa-solid fa-moon icon-moon"></i>
+                <i class="fa-solid fa-sun icon-sun"></i>
+            </label>
         </div>
 
-        <!-- ..................... Title, photo and table ..................... -->
-        <div class = "me">
+        <!-- Title, photo and table -->
+        <div class="me">
             <h1>  Hello! I'm  </h1>
 
             <h2>Alisia Cristina Mureșan</h2>
@@ -42,7 +49,6 @@
                     <td style="text-align: center;">Female</td>
                     <td style="text-align: center;">8700 Horsens, Denmark</td>
                 </tr>
-                
             </table>
 
             <p>Nationality: Romanian,<br> Gender: Female,<br> Location: 8700 Horsens Denmark</p>
@@ -50,16 +56,15 @@
             <img src="images/cv-photo.jpg" alt="Alisia Cristina Mureșan" class="profile-img">
         </div>
 
-        <!-- ..................... Introduction ..................... -->
+        <!-- Introduction -->
         <div class="about-me">
-
             <h1>  About me  </h1>
             <ul>
                 <li><i class="fa-solid fa-circle-user"></i> Software Technology Engineering student at VIA University College driven by the challenge of turning ideas into impactful reality.<br></li>
                 <li><i class="fa-regular fa-user"></i> Dependable, organized, and proactive, I thrive in collaborative team environments and bring great energy, attention to detail, and a rapid learning curve to every project I take on.</li>
             </ul>
 
-            <!-- ..................... interests ..................... -->
+            <!-- Interests -->
             <h1>  Interests  </h1>
             <ul>
                 <li><i class="fa-solid fa-robot"></i> Real-World & Applied AI: Exploring practical applications in healthcare and smart agriculture, with a drive to create my own solutions.</li>
@@ -67,8 +72,7 @@
                 <li><i class="fa-solid fa-users"></i> Collaborative Problem-Solving: Collaborating closely with others to tackle technical challenges and build reliable software.</li>
             </ul>
 
-
-            <!-- ..................... Favorites ..................... -->
+            <!-- Favorites -->
             <h1>  Favorites  </h1>
             <ul>
                 <li><i class="fa-solid fa-map-location"></i> Travelling (I want to see all the countries)</li>
@@ -77,7 +81,7 @@
                 <li><i class="fa-solid fa-music"></i> Music (I like singing and playing the guitar)</li>
             </ul>
 
-            <!-- ..................... Contact information ..................... -->
+            <!-- Contact information -->
             <h1>  Contact  </h1>
             <ul>
                 <li><i class="fa-solid fa-envelope"></i> Email: <a href="mailto:muresanalisia@gmail.com">muresanalisia@gmail.com</a></li>
